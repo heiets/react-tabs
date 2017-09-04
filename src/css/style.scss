@@ -1,0 +1,153 @@
+//@import 'app/libs/normalize-css/normalize';
+//@import 'app/libs/font-awesome/scss/font-awesome';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+body {
+   line-height: 1;
+}
+ol, ul {
+   list-style: none;
+}
+blockquote, q {
+   quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+   content: none;
+}
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+* {
+   box-sizing: border-box;
+}
+body {
+   font-family: Open Sans;
+   background-color: #ffffff;
+   font-family: Roboto;
+}
+.highlight {
+   display: inline-block;
+   background-color: rgba(0,0,255,0.5);
+}
+@mixin main__width {
+   width: 950px;
+   margin: 0 auto;
+}
+.header {
+   height: 62px;
+   background-color: #434753;
+   border-bottom: 3px solid #2f323b;
+   .header__wrap {
+      @include main__width
+   }
+}
+#formInput {
+   margin: 0 auto;
+   margin-top: 45px;
+   width: 450px;
+   height: 27px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   background-color: #f2f2f2;
+   outline: 0;
+}
+.body__wrap {
+   @include main__width;
+}
+.search__wrap {
+   text-align: center;
+}
+.list {
+   padding-top: 50px;
+   ul {
+      margin-top: 100px;
+      li {
+         min-height: 100px;
+         color: #5a5e6c;
+         .desc {
+            margin-top: 20px;
+            justify-content: flex-start;
+            div {
+               width: 120px;
+               margin-right: 20px;
+               color: #b4b4b4;
+               display: flex;
+               &:first-child {
+                  width: 200px;
+               }
+            }
+         }
+      }
+   }
+}
+.name {
+  display: flex;
+}
+.item {
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #f1f1f1;
+  background-color: #fbf9f9;
+  display: flex;
+  justify-content: space-between;
+  &:hover {
+    background-color: #f1f1f1;
+  }
+  .position {
+    width: 200px;
+  }
+  .jerseyNumber {
+    width: 200px;
+  }
+  .dateOfBirth {
+    width: 200px;
+    text-align: center;
+  }
+  .nationality {
+    width: 200px;
+    cursor: pointer;
+  }
+  .contractUntil {
+    width: 200px;
+  }
+  .marketValue {
+    width: 200px;
+  }
+  &__price {
+    width: 200px;
+  }
+}
