@@ -7,21 +7,22 @@ import * as actions from './actions';
 import selectors from './selectors';
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-        // this.state = {
-        //     data: []
-        // };
-    }
-    // setSearchValue = () => (value) => {
-    //     this.setState({ searchValue: value });
-    // };
     render() {
-      // const {  search, loadData } = this.props;
       return <div>
         <div className="body__wrap">
-            <Create applyTable={ this.props.applyTable }/>
-            <List table={ this.props.table }/>
+            <h1 style={{'textAlign': 'center'}}>Created by Oleksandr Heiets</h1>
+            <Create
+                applyTable={ this.props.applyTable }
+                addRow={ this.props.addRow }
+                addCol={ this.props.addCol }
+                deleteRow={ this.props.deleteRow }
+                deleteCol={ this.props.deleteCol }
+                table={ this.props.table }
+            />
+            <List
+                table={ this.props.table }
+                changeTd={ this.props.changeTd }
+            />
         </div>
       </div>
     }
