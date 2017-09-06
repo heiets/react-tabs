@@ -206,7 +206,6 @@ const table = (state = initialState.table, action) => {
             let newTableAfterDelRows = {
                 ...state
             };
-            // dddddsdsd
             deleteStateRowsKeysForRows.forEach((rowKey, rowIndex)=>{
                 if (deleteRowToIndex + 1 <= deleteStateRowsCountForRows - rowIndex && deleteRowToIndex !== deleteStateRowsCountForRows) {
                     let newObjForRow = {};
@@ -223,17 +222,6 @@ const table = (state = initialState.table, action) => {
                 }
             });
             delete newTableAfterDelRows[`row${deleteStateRowsCountForRows}`];
-            // let deleteNewObjForNewRow = {};
-            // deleteStateColsKeysForRows.forEach((colKey, colIndex) => {
-            //     deleteNewObjForNewRow[`col${+colIndex + 1}`] = {
-            //         value: ' ',
-            //         colspan: 1,
-            //         rowspan: 1,
-            //         rowIndex: deleteRowToIndex,
-            //         colIndex: +colIndex + 1
-            //     }
-            // });
-            // newTableAfterDelRows[`row${addRowToIndex + 1}`] = deleteNewObjForNewRow;
             return newTableAfterDelRows;
         case 'ADD_COL':
             let stateRowsKeys = Object.keys(state);

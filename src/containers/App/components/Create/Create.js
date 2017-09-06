@@ -1,10 +1,6 @@
 import React, {Component} from 'react'
 
 export default class Create extends Component {
-    componentWillMount() {
-        // const { loadData } = this.props;
-        // loadData();
-    }
     clearActive = () => {
         Array.prototype.forEach.call(document.querySelectorAll('.active'), function (node) {
             node.classList.remove('active');
